@@ -1,6 +1,5 @@
 ## Advanced CSS and Intro to JavaScript
 
-one major change so i can save and push my file
 ## Objects
 
 ## Objectives

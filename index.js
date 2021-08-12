@@ -15,9 +15,10 @@ The function should:
   Example createMenuItem('tacos', 8, 'Lunch') should return {name: 'tacos', price: 8, category: 'Lunch'}
 */
 
-function createMenuItem(/*Your code here*/){
-    /*Your code here*/
+function createMenuItem(name, price, catagory){
+    return {name, price, catagory}
 }
+console.log("task 1 a:", createMenuItem('tacos',8,'Lunch'))
 
 /* 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 1b: 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀
 Invoke your function!
@@ -28,12 +29,13 @@ Test your createMenuItems function by doing the following:
   
   For example: createMenuItem("pizza",5,"lunch") would return this as the object: {name:"Pizza",price:5,category:"lunch"}
 */
-
+console.log('task 1B', createMenuItem('egg salad', 3, 'lunch'))
+console.log('task 1B', createMenuItem('hash browns', 1, ('breakfast')))
+console.log('task 1B', createMenuItem('grits', 1, 'breakfast'))
 
 
 /* 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 2: 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀
-You're having a lunch special! 25% off for teachers and students, 10% off for everyone else. Add a method to the 
-burger object below that automatically calculates price depending on the a string received as a parameter. 
+You're having a lunch special! 25% off for teachers and students, 10% off for everyone else. Add a method to the burger object below that automatically calculates price depending on the a string received as a parameter. 
 
 Using the burger object below do the following:
   1. Add a method called discount to the burger object 
@@ -47,8 +49,16 @@ const burger = {
   name: "Burger", 
   price: 18, 
   category: "Lunch", 
-  
-}
+  discount: function(customer){
+  if (customer === 'teacher' || customer === 'student'){
+      return this.price - (this.price * 0.25);
+  }else if (customer ==='public'){
+    return this.price - (this.price * 0.10);  
+  }
+ }
+}   
+console.log('Task 2:', burger.discount('customer'));
+
 
 
 
@@ -69,6 +79,7 @@ Using the reviews array above:
   1. log only Julius' feedback to the console - no function needed 
 */
 
+console.log('Task 3', reviews[5].feedback);
 
 
 
@@ -80,7 +91,9 @@ Reyna's feedback is missing! Use what you know to do the following: (no function
 reviews[7].feedback = 'this place is chill with really cool people, great for getting work done on weekdays';
 console.log(reviews);
 
+reviews.push({name:'Sarah', rating: '1', feedback: 'There was a fly in my soup'});
 
+console.log ('Task 4', reviews);
 
 
 /* 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 5: 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀
@@ -157,7 +170,7 @@ Use the getReviewsByRating function below to do the following:
 Use the getLongReviews function below to do the following:
   1. Receive the array that holds all the reviews
   2. Return an array with all the reviews that have more than 15 words in their feedback
-
+++++++++++++++++++++++++
   For example: getLongReviews(reviews) would return:
   [
     {name: "Wen", rating: 4.5, feedback:"I don't leave my house often, but when I do, it's for this place. Highly reccomend."},
@@ -193,7 +206,6 @@ function carMaker(/* code here */) {
     /* code here */
     
 }
-
 
 /* 🛑🛑🛑🛑🛑 Please do not modify anything below this line 🛑🛑🛑🛑🛑 */
 function foo(){
