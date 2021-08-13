@@ -15,10 +15,10 @@ The function should:
   Example createMenuItem('tacos', 8, 'Lunch') should return {name: 'tacos', price: 8, category: 'Lunch'}
 */
 
-function createMenuItem(name, price, catagory){
-    return {name, price, catagory}
+function createMenuItem(name, price, category){
+    return {name, price, category};
 }
-console.log("task 1 a:", createMenuItem('tacos',8,'Lunch'))
+console.log("task 1 a:", createMenuItem('tacos',8,'Lunch'));
 
 /* 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 1b: 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀
 Invoke your function!
@@ -107,7 +107,7 @@ Write a function that creates an object with name, rating, feedback, add the new
 function addReview (array){
   return reviews.push({name:"Renya", rating: 7, feedback:"this place is chill with really cool people, great for getting work done on weekdays"});
  }
- 
+
   console.log ('Task 4', addReview);
 
 /* 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 6: 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀
