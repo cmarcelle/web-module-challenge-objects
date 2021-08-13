@@ -45,7 +45,7 @@ Using the burger object below do the following:
 
   For example: burger.discount("teacher") would return 13.5 and burger.discount("public") would return 16.2
 */
-const burger = {
+export const burger = {
   name: "Burger", 
   price: 18, 
   category: "Lunch", 
@@ -57,7 +57,7 @@ const burger = {
   }
  }
 }   
-console.log('Task 2:', burger.discount('customer'));
+console.log('Task 2:', burger.discount('student'));
 
 
 
@@ -89,11 +89,10 @@ Reyna's feedback is missing! Use what you know to do the following: (no function
   2. log the reviews array to the console to check your work
 */
 reviews[7].feedback = 'this place is chill with really cool people, great for getting work done on weekdays';
-console.log(reviews);
 
-reviews.push({name:'Sarah', rating: '1', feedback: 'There was a fly in my soup'});
+console.log('Task 4', reviews);
 
-console.log ('Task 4', reviews);
+
 
 
 /* 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 5: 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀
@@ -105,9 +104,11 @@ Write a function that creates an object with name, rating, feedback, add the new
   4. should return the resulting array
 */
 
-function addReview(/*Your Code Here */){
-  /*Your Code Here */
-}
+function addReview (array){
+  return reviews.push({name:"Renya", rating: 7, feedback:"this place is chill with really cool people, great for getting work done on weekdays"});
+ }
+ 
+  console.log ('Task 4', addReview);
 
 /* 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 6: 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀
 Write a function to return a review based on the index of the review in the array.
@@ -120,16 +121,14 @@ Use the getReviewByIndex function below to do the following:
 */
 
 
-function getReviewByIndex(/*Your code here*/) {
-  /*Your code here*/
+function getReviewByIndex(array, number) {
+  return `${array[number].name} gave the resturant a ${array[number].rating} star review, and their feedback was: ${array[number].feedback}`;
 }
 
-
-  
+console.log('Task 6', getReviewByIndex(reviews, 2));
 
 /* 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 7: 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 
 Write a function to get information about the most recent (last) review called `getLastReview`
-
 Use the getLastReview function below to do the following:
   1. Receive an array of objects as a parameter
   2. Return the last index as a string in the format: "{name} gave the restaurant a {rating} star review, and their feedback was: {feedback}"
@@ -139,13 +138,11 @@ Use the getLastReview function below to do the following:
 */
 
 
-function getLastReview(/*Your code here*/) {
-  /*Your code here*/
+function getLastReview(array) {
+  return `${array[array.lenght -1].name} gave the resturant a ${array[array.lenght -1].rating} star rating, and their feedback was ${array[array.lenght -1].feedback}`;
 } 
 
-
-
-///////////////🍔☕️🍽 STRETCH🍔☕️🍽////////////////////
+console.log('Task 7', getLastReview);
 
 /** 💪💪💪💪💪💪💪💪💪💪 STRETCH 1: 💪💪💪💪💪💪💪💪💪💪 
 Use the getReviewsByRating function below to do the following:
